@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyinfo.js'
-import bg from "./assets/bg.jpg";
+import bgg from "./assets/bgg.jpg";
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg-amber-700"
             style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage: `url(${bgg})`,
             }}
         >
             <div className="w-full">
