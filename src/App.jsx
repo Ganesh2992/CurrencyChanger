@@ -7,8 +7,8 @@ import bg from "./assets/bg.jpg";
 function App() {
 
   const [amount,setAmount] = useState(0)
-  const [from, setfrom] = useState("usd")
-  const [to,setTo] = useState("inr")
+  const [from, setfrom] = useState("USD")
+  const [to,setTo] = useState("INR")
   const [convertedAmount, setConvertedAmount] = useState(0)
 
   const currencyInfo = useCurrencyInfo(from)
@@ -48,7 +48,7 @@ function App() {
                                 label="From"
                                 amount={amount}
                                 currencyOptions={options}
-                                onCurrencyChange={(currency)=>setAmount(currency)}
+                                onCurrencyChange={(currency)=>setfrom(currency)}
                                 selectCurrency={from}
                                 onAmountChange={(amount)=> setAmount(amount)}
                             />
@@ -63,6 +63,7 @@ function App() {
                                 swap
                             </button>
                         </div>
+                        
                         <div className="w-full mt-1 mb-4">
                             <InputBox
                                 label="To"
