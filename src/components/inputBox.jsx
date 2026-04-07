@@ -22,11 +22,14 @@ function InputBox({
                 <input
                     id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
-                    type="number"
+                    type=""
                     placeholder="Amount"
                     disabled={amountDisable}
                     value={amount}
-                    onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))} 
+                    onChange={(e) => {
+                    const value = e.target.value;
+                    onAmountChange && onAmountChange(value === "" ? "" : Number(value));
+}} 
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">

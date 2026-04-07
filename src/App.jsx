@@ -6,10 +6,10 @@ import bgg from "./assets/bgg.jpg";
 
 function App() {
 
-  const [amount,setAmount] = useState(0)
+  const [amount,setAmount] = useState("")
   const [from, setfrom] = useState("USD")
   const [to,setTo] = useState("INR")
-  const [convertedAmount, setConvertedAmount] = useState(0)
+  const [convertedAmount, setConvertedAmount] = useState("")
 
   const currencyInfo = useCurrencyInfo(from)
 
