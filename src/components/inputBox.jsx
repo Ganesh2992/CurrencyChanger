@@ -28,7 +28,7 @@ function InputBox({
                     value={amount}
                     onChange={(e) => {
                     const value = e.target.value;
-                    onAmountChange && onAmountChange(value === "" ? "" : Number(value));
+                    onAmountChange && onAmountChange(value===""?"":Number(value))
 }} 
                 />
             </div>
